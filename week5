@@ -1,0 +1,83 @@
+# Assignment 1: custom class with inheritance
+
+class videoGame:
+    def __init__(self, title, genre, platform , developer):
+        self.title = title
+        self.genre = genre
+        self.platform = platform
+        self.developer = developer
+    def launch (self):
+        print( f" {self.title}, is launching on {self.platform}...")
+
+        def info(self):
+            print(F"Game: {self title}"/Genre: {self.genre}/Platform: {self.platform}/Developer: {self.developer}")
+
+            class onlineGame(videoGame):
+                def __init__(self, title, genre, platform, developer, max_players):
+                    super().__init__(title, genre, platform, developer)
+                    self.max_players = max_players
+
+                    def connect _to_server(self):
+                        print(f"{self.title}is connecting to the server for upto{self.max_players}players...")")
+
+def launch(self): # Overriden method
+    print(f"{self.title}, is launching online on {self.platform}... multiplayer ready!")
+
+
+    #polymorphism challenge: vehicles 
+
+class Vehicle:
+    def move(self):
+        pass # Abstract behaviour
+
+class Car(Vehicle):
+    def move(self)
+        print(" Driving on the road.")
+
+class plane(vehicle):
+    def move(self):
+        print(" Flying in the sky.")
+
+class Bicycle(Vehicle):
+    def move(self):
+        print(" pedalling on earth.")
+
+--- main program starts here ---
+
+def main():
+    print("Welcome to the Game video and vehicle Demo!\n")
+
+    # part1: VdeoGame objects
+    print("creating your games ...\n")
+    game1 = videoGame("celeste", "platformer", "PC", "Matt Makes Games")
+    game2 = onlineGame("Fortnite", "Battle Royale", "PC/Console", "Epic Games", 100)
+
+    game1.launch()
+    game1.info()
+    print()
+    game2.launch()
+    game2.connect_to_server()
+    game2.info()
+
+    #part2: polymorphism with vehicles
+    print("\n polymorphism in action! watch different vehicles moves...\n")
+    vehicles = [Car(), Plane(), Bicycle()]
+    for v in vehicles:
+        v.move()
+
+#optional: user chooses a vehicle 
+print("\n try it ypurself !")
+choice =input("choose a vehicle to move (car/plane/bicycle): ").lower()
+if choice == "car":
+    car(). move()
+elif choice == "plane":
+    plane().move()
+elif choice == "bicycle":
+    bicycle().move()
+else:
+    print("unknown vehicle type.")
+
+if __name__ == "__main__":
+    main()
+
+    
